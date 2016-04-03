@@ -1,0 +1,26 @@
+language: node_js
+node_js:
+  - "5"
+
+branches:
+  only:
+  - source
+
+before_install:
+- npm install -g hexo-cli
+
+install:
+- npm install
+
+script:
+- hexo g
+
+after_success:
+- git config --global user.name "stayHF"
+- git config --global user.email "stay.hf@icloud.com"
+- sed -i'' "/^ *repo/s~github\.com~${GH_TOKEN}@github.com~" _config.yml
+- hexo d --silent
+
+env:
+  global:
+    secure: JePzCn6nNb+4v1zJLTt41lmKzYAYAQEfu1d68qS72IhBUMk5RhiwCgGs5xOVmWLpvppebnC0FjQ6wdB9Mvd9xJ17RDm5Ftwhub0c33HXAl0rhrNL4ds5SmJbnHieXoqUiA7/J2tvCLegAHycVK6JnNY2ElyRgt9rTsCU3S7gfn0bcqAzUmlrAel+ffYOPnKUrQkF6Ss8elKOQ0hlVq6Jk/Wg+BmghpLoPRlld5+EopXNDv4VZimPanQIRWJYok4f6F8hY8kzQN8a5irFV8jL9ZSzXdpDpFZOTWKVv3ZtQ2Oadt1HbTjpC3jcCHn/O5xTn7vkG1HLjOmLjEihsMxBb4KW7eFUJboyroxTF78lON5gBA5fARNm/xsecK89bB/rAe1lqT66k0bckVJbGnPLfZPFC1/V5mt8lMJtqPy7ahNHtwbHo6hNczea2U8CRym0XZvZsXXcarVzRo1ENx+Xl7ZvSSkXvayYV98beTLqX89qliv8/9CUZ6pX5RvJgzCqyh5fOYUqkMMZwpeBQYk+lWehVH6A72boycSzzrddhJ/XAjaTeTBd2HDyXY6DyYMQJ+SIWMLiMrf8SqckrM9mZ4cbanEKDZ/GFDsTIgi57x0BhFzYMvTM3IS1FrwCCWi09K1oOJmTG1dAz9yEKieujWiJqia+PvMdk33lYSSqZRk=
