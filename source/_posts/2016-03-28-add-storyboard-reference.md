@@ -40,3 +40,5 @@ Main.storyboard, 一个TabBarViewContoller的应用，内有4个Tab，每个Tab�
 ![](http://7xskzj.com1.z0.glb.clouddn.com/storyboard_reference_result.png)
 
 Done.
+
+注意到了吗？最后一张图后面一列的ViewController名字有些乱，实际项目中应该使用可读性更强的名称。
