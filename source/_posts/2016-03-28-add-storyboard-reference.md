@@ -8,9 +8,9 @@ categories: iOS
 ---
 如果你使用Interface Builder，将应用的所有场景都放在一个Storyboard，那久而久之，随着应用的膨胀，场景越来越多，这个Storyboard将会越来越臃肿。之前可能没有很好的方法来对这些UI进行重构，但随着Apple推出iOS9和Xcode7，让重构成为可能。
 
-<!-- more -->
 在Xcode7中，细心的朋友会发现，在Object Library中View Controller下面，多了一个叫Storyboard Reference的对象，如下图：
 ![](http://7xskzj.com1.z0.glb.clouddn.com/storyboard_objects.png)
+<!-- more -->
 
 # Storyboard Reference 基本用法
 Storyboard Reference大致有3种用法：
