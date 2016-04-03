@@ -1,20 +1,15 @@
 language: node_js
 node_js:
-  - "5"
-
+- '5'
 branches:
   only:
   - source
-
 before_install:
 - npm install -g hexo-cli
-
 install:
 - npm install
-
 script:
 - hexo g
-
 after_success:
 - git config --global user.name "stayHF"
 - git config --global user.email "stay.hf@icloud.com"
@@ -23,4 +18,4 @@ after_success:
 
 env:
   global:
-    secure: JePzCn6nNb+4v1zJLTt41lmKzYAYAQEfu1d68qS72IhBUMk5RhiwCgGs5xOVmWLpvppebnC0FjQ6wdB9Mvd9xJ17RDm5Ftwhub0c33HXAl0rhrNL4ds5SmJbnHieXoqUiA7/J2tvCLegAHycVK6JnNY2ElyRgt9rTsCU3S7gfn0bcqAzUmlrAel+ffYOPnKUrQkF6Ss8elKOQ0hlVq6Jk/Wg+BmghpLoPRlld5+EopXNDv4VZimPanQIRWJYok4f6F8hY8kzQN8a5irFV8jL9ZSzXdpDpFZOTWKVv3ZtQ2Oadt1HbTjpC3jcCHn/O5xTn7vkG1HLjOmLjEihsMxBb4KW7eFUJboyroxTF78lON5gBA5fARNm/xsecK89bB/rAe1lqT66k0bckVJbGnPLfZPFC1/V5mt8lMJtqPy7ahNHtwbHo6hNczea2U8CRym0XZvZsXXcarVzRo1ENx+Xl7ZvSSkXvayYV98beTLqX89qliv8/9CUZ6pX5RvJgzCqyh5fOYUqkMMZwpeBQYk+lWehVH6A72boycSzzrddhJ/XAjaTeTBd2HDyXY6DyYMQJ+SIWMLiMrf8SqckrM9mZ4cbanEKDZ/GFDsTIgi57x0BhFzYMvTM3IS1FrwCCWi09K1oOJmTG1dAz9yEKieujWiJqia+PvMdk33lYSSqZRk=
+  - secure: CngyO1Mf8QKKh4WPpTr6qDRjHw5pHjagJTZRpK4qSnUcbovtu6bBgbiofvWmCC6/c3nEy2ZR/JLUfIsONk8EUCK5X3A19+eg4LN2LoYG7DtpedneeIizPeCv6gzWpOgk91mS4tUGv/E2oqEg3FsVbh2OruiFCsfyyZPsbokXvSOHU0l+vMXAxTPD3AJOWsY1bDxiPrx7EoyYtEUBeoQdbLSQ0j7Nzpw7G5kemtNBgqfZPAHW8CxqhzEpylnnBt74hz2D02TexgvRuIpYadxn/mRVFWWlKYkKg4377x1vaYmrTsRH7gtorrgLMuIgwFzDAofCTE3jwCrdajxTT1yzLGdXwY6D4SXStalAlI5w7ZKQwQIApv6e8KTzmF1ZwvjoriaewFCUwlC6OmM/7CBXYnI+hQ89rXsDSySRaO2p2bofZkuKn2tTyLRBV//K9xRpe27wvx4Mcp0CLgtwynEzaz54qCdqyLSRbyc4CJ8a1GubmZDylAJlXXTwwAdPXHJ0DF4SS6kVK/qROL87EL8LScfszuMM7Ikc+P11LQDrefrnB1NUu1BzF+AnmLQFWmytsc8W96NDUgLngZo9/0EBMEzPsXYVw5C8/99eAfovX8UErilGDF19XZ6Rtjxj0zhRL0hvCK1r4qVxENyKUfxa4TJCE/MEjLxklyWYFEXjuNY=
