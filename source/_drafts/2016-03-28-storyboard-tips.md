@@ -3,7 +3,7 @@ title: storyboard-tips
 date: 2016-03-28 00:34:18
 tags:
 - iOS
-- storyboard
+- Storyboard
 categories: iOS
 ---
 

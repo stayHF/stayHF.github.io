@@ -88,4 +88,4 @@ Plugins:
 
 robotstxt:
   useragent: "*"
-  sitemap: /sitemap.xml
+  sitemap: https://stayhf.github.io/sitemap.xml
