@@ -14,7 +14,7 @@ date: 2016-03-24 13:56:13
 * **预备知识**介绍搭建博客之前，需要具备的一些知识点；
 * **搭建基本博客**介绍搭建一个基本的Hexo博客、以及如何编写文章和发布；
 * **进阶设置**介绍一些更高级的配置；
-* **高级技巧**介绍如何在多台机器都能编写博客、以及如何让文章自动化生成和部署。
+* **自动化部署**介绍如何在多台机器都能编写博客、以及如何让文章自动化生成和部署。
 
 ![](http://7xskzj.com1.z0.glb.clouddn.com/blog_overview.png)
 
@@ -29,7 +29,7 @@ date: 2016-03-24 13:56:13
 * 更新和提交
 * GitHub 的 Personal Access Token
 
-GitHub 提供了一个客户端 [GitHub Desktop](https://desktop.github.com)，提供了这些基本功能。如果对这块不了解，可以先取玩玩它。
+GitHub 提供了一个客户端 [GitHub Desktop](https://desktop.github.com)，提供了这些基本功能。如果对这块不了解，可以先去玩玩它。
 
 ### Homebrew
 Homebrew 是做什么的？[官网](http://brew.sh/index_zh-cn.html) 给出了明确解释：**OS X 不可或缺的套件管理器！** 同时，也给出了安装方法。
@@ -38,7 +38,7 @@ Homebrew 是做什么的？[官网](http://brew.sh/index_zh-cn.html) 给出了�
 * Node.js 内嵌 **V8** 引擎，是目前非常流行的JavaScript运行环境；
 * NPM 是 Node.js 包管理器。
 
-这里我们使用 [NVM](https://github.com/creationix/nvm)(Node.js Version Manager) 来安装 Node.js 环境.
+我们使用 [NVM](https://github.com/creationix/nvm)(Node.js Version Manager) 来安装 Node.js 环境.
 #### 首先安装 NVM
 ```bash
 $: brew install nvm
@@ -123,7 +123,7 @@ deploy:
   branch: master
   message: "update post"
 ```
-注意上面的 **token**, 它是你 GitHub 上的 Personal Access Token。这样有一个好处，就是你在部署时就不需要输入GitHub 用户名和密码。
+注意上面的 **{token}**, 它是你 GitHub 上的 Personal Access Token。这样有一个好处，就是你在部署时就不需要输入GitHub 用户名和密码。
 
 ### 草稿
 创建博文指令：
@@ -160,10 +160,10 @@ blog $: hexo server
 ```shell
 blog $: hexo deploy
 ```
-试试访问 https://andy.github.io 看看吧！Enjoy!
+试试访问 https://andy.github.io 看看吧！
 
 现在，你有了一个自己的博客，使用默认的主题。可以很方便的写博客和发布博客。
-或许，你觉得这个主题你并不喜欢，或者一些很细节的问题没有解决。比如：评论、分享、搜索等，那么可以再看看下面的进阶部分。
+或许，你觉得这个主题你并不喜欢，或者一些很细节的问题没有解决。比如：评论、分享、搜索等，那么可以再看看下面的进阶配置。
 
 ## 进阶配置
 ### 配置主题
@@ -179,8 +179,6 @@ blog $: git clone https://github.com/iissnan/hexo-theme-next.git themes/next
 启用 NexT 主题
 
 在站点配置文件 **_config.yml** 中，修改使用的主题：
-
-_config.yml
 将
 ```shell
 theme: landscape
@@ -253,7 +251,7 @@ swiftype_key: your_swiftype_key
 * secret_key
 
 下载本地命令行同步工具 [qasync](http://developer.qiniu.com/code/v6/tool/qrsync.html), 假设放在/usr/local/bin/qiniu-devtools:
-1. 目录下新建 **conf.json** 文件， 内容如下：
+1. 在/usr/local/bin/qiniu-devtools目录下新建 **conf.json** 文件， 内容如下：
 ```json
 {
     "src": "/Users/andy/Pictures/qiniu-images",
@@ -269,8 +267,7 @@ alias qiniu="/usr/local/bin/qiniu-devtools/qrsync /usr/local/bin/qiniu-devtools/
 ```shell
 $: source ~/.bash_profile
 ```
-
-将你要上传到七牛的图片放到`/Users/andy/Pictures/qiniu-images`， 然后在命令行执行：
+4. 将你要上传到七牛的图片放到`/Users/andy/Pictures/qiniu-images`， 然后在命令行执行：
 ```shell
 $: qiniu
 ```
@@ -278,7 +275,7 @@ $: qiniu
 
 现在，你的博客使用着自己喜欢的主题，阅读次数、Google搜索、站内搜索、评论等一应俱全，是不是很开心，但还有些技巧也很有意思，能够简化你博客的部署过程，不妨往下看看？
 ## 自动化部署
-看到文章最开始的配图了吗？这里将图片再贴一次，并描述可能一个使用场景：
+看到文章最开始的配图了吗？这里将图片再贴一次，并描述一个强需求的使用场景：
 ![](http://7xskzj.com1.z0.glb.clouddn.com/blog_overview.png)
 
 1. 假设你在公司和家里都想能对你的博客进行操作，那么将本地博客目录提交到 GitHub 来进行管理就是个好主意；
