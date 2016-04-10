@@ -16,6 +16,10 @@ after_success:
 - sed -i'' "/^ *repo/s~github\.com~${GH_TOKEN}@github.com~" _config.yml
 - hexo d --silent
 
+cache:
+  directories:
+    - node_modules
+
 env:
   global:
   - secure: CngyO1Mf8QKKh4WPpTr6qDRjHw5pHjagJTZRpK4qSnUcbovtu6bBgbiofvWmCC6/c3nEy2ZR/JLUfIsONk8EUCK5X3A19+eg4LN2LoYG7DtpedneeIizPeCv6gzWpOgk91mS4tUGv/E2oqEg3FsVbh2OruiFCsfyyZPsbokXvSOHU0l+vMXAxTPD3AJOWsY1bDxiPrx7EoyYtEUBeoQdbLSQ0j7Nzpw7G5kemtNBgqfZPAHW8CxqhzEpylnnBt74hz2D02TexgvRuIpYadxn/mRVFWWlKYkKg4377x1vaYmrTsRH7gtorrgLMuIgwFzDAofCTE3jwCrdajxTT1yzLGdXwY6D4SXStalAlI5w7ZKQwQIApv6e8KTzmF1ZwvjoriaewFCUwlC6OmM/7CBXYnI+hQ89rXsDSySRaO2p2bofZkuKn2tTyLRBV//K9xRpe27wvx4Mcp0CLgtwynEzaz54qCdqyLSRbyc4CJ8a1GubmZDylAJlXXTwwAdPXHJ0DF4SS6kVK/qROL87EL8LScfszuMM7Ikc+P11LQDrefrnB1NUu1BzF+AnmLQFWmytsc8W96NDUgLngZo9/0EBMEzPsXYVw5C8/99eAfovX8UErilGDF19XZ6Rtjxj0zhRL0hvCK1r4qVxENyKUfxa4TJCE/MEjLxklyWYFEXjuNY=
