@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://stayhf.github.io/sitemap.xml
